@@ -108,17 +108,32 @@ DATE:{str(transactions.date_bought)}''')
 
 # Runs:
 search("sweater")
+# * Yes! We have 30x of "sweater" in stock! *
 search("jeanss")
-
+#  * We don't have any products like: "jeanss", please try again. * 
 list_user_products(2)
-
+""" * User "Graham" has the following products:... 
+   ...200x of "sneakers"""
 list_products_per_tag(2)
-
+""""* Products found by tag: "women"... 
+   ..."dress" *
+   ..."sneakers" *
+   ..."jacket" *""""
 add_product_to_user(1,3)
-
+# * "sweater" is added to "John"! *
 update_stock(1, 200)
-
+#  * The stock for "sweater" is updated by "200". Updated stock is: "230" *
 remove_product(3, 3)
-               
+# * The stock for "hoodie" is updated by "30". Updated stock is: "160" *            
 purchase_product(2, 2, 100)
-
+""""* "Graham" bought "100"x of "hoodie" *
+========================================
+ORDER TRANSACTION
+    
+	PRODUCT:hoodie
+	QUANTITY:100
+    
+	PRICE:5000.00
+    
+DATE:2023-05-31 12:06:15.550810
+========================================""""
